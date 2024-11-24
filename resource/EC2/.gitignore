@@ -1,0 +1,37 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore backup files created by Terrafoog
+
+# Ignore the .terraform directory (contains Term
+*.backup
+
+# Ignore Terraform crash logs
+crash.lrraform's provider plugins and cache)
+.terraform/
+.terraform.lock.hcl
+
+# Ignore local override files (often used for testing/debugging)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore any files generated automatically by Terraform
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Ignore the plan output file
+*.tfplan
+
+# Ignore sensitive variable files (e.g., credentials)
+# Uncomment if you have separate secrets files
+# secrets.tfvars
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
