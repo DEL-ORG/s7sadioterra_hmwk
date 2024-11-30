@@ -9,10 +9,11 @@ terraform {
   required_version = ">= 1.0.0"  # Specify Terraform version if needed
 }
 
-variable "region" {
-  description = "AWS region to deploy resources"
-  type        = string
-  default     = "us-east-1"
+locals  {
+ ami_id        = "ami-063d43db0594b521b"  # Replace with a valid AMI ID
+instance_type = "t2.micro"
+region        = "us-east-1"
+key_name      = "women-power"  
 }
   terraform {
   backend "s3" {
@@ -26,7 +27,9 @@ variable "region" {
 
 module "ec2-module" {
   source      = "../../module/ec2-module"
-# aws_region  = local.aws_region
-#common_tags = local.common_tags
+ami_id        = local. ami_id  
+instance_type = local.instance_type
+region        = "us-east-1"
+key_name      = "women-power"  
 
 }
